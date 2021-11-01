@@ -5,7 +5,6 @@ import selectExpenses from '../selectors/expenses';
 
 // This is exported as an unconnected version only for testing
 export const ExpenseList = (props) => {
-
     return (
         <div>
             {
