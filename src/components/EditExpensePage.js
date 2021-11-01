@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
-import { editExpense, removeExpense } from '../actions/expenses';
+import { editExpense, removeExpense, startRemoveExpense } from '../actions/expenses';
 
 // This is exported as an unconnected version only for testing
 export class EditExpensePage extends React.Component {
@@ -10,13 +10,13 @@ export class EditExpensePage extends React.Component {
         this.props.history.push('/');                    // Redirect to the dashboard
     };
     onRemove = () => {
-        this.props.removeExpense({ id: this.props.expense.id });
+        this.props.startRemoveExpense({ id: this.props.expense.id });
         this.props.history.push('/');                    // Redirect to the dashboard
     };
     render() {
         return (
             <div>
-                <ExpenseForm 
+                <ExpenseForm
                     expense={this.props.expense}
                     onSubmit={this.onSubmit}
                 />
@@ -32,7 +32,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
     editExpense: (id, expense) => dispatch(editExpense(id, expense)),
-    removeExpense: (data) => dispatch(removeExpense(data))
+    startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
 });
 
 // Call the connect() function to find the specific expense to be edited
