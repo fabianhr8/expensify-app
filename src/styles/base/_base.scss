@@ -1,22 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-    // Since rem measure is 16px, then 16 * .625 = 10, so we can use 1 rem as 10 of a pixels
-    font-size: 62.5%;
+  // Since rem measure is 16px, then 16 * .625 = 10, so we can use 1 rem as 10 of a pixels
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: $m-size;
+  color: $dark-grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $m-size;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:disabled {
-    cursor: default;
+  cursor: default;
 }
 
 .is-active {
-    font-weight: bold;
-    // color: green;
-  }
+  font-weight: bold;
+  // color: green;
+}
