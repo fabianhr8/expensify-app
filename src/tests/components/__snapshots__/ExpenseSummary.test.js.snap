@@ -21,6 +21,11 @@ exports[`Should render ExpenseSummary with multiple expenses 1`] = `
         $250,240.00
       </span>
     </h1>
+    <p
+      className="list-item__sub-title"
+    >
+       expense(s) hidden
+    </p>
     <div
       className="page-header__actions"
     >
@@ -56,6 +61,11 @@ exports[`Should render ExpenseSummary with one expense 1`] = `
         $250.00
       </span>
     </h1>
+    <p
+      className="list-item__sub-title"
+    >
+       expense(s) hidden
+    </p>
     <div
       className="page-header__actions"
     >
